@@ -3,21 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ghost_white: #f8f9fa;
+  --eerie_black: #181b1e;
+  --light_gray: #cfd1d4;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --light_gray: #cfd1d4;
   }
+}
+
+@font-face {
+  font-family: "Albert-Sans";
+  src: url("./fonts/AlbertSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kyiv-Region";
+  src: url("./fonts/KyivRegion-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Albert-Sans, sans-serif;
 }
 
 @layer utilities {
