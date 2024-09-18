@@ -1,7 +1,6 @@
-import { CategoryNameType } from "@/types/categories.types";
 import Image from "next/image";
 import Link from "next/link";
-import React, { ReactNode } from "react";
+import React from "react";
 import category from "@/static/svgs/category-svgrepo-com.svg";
 
 const Category: React.FC<{ name: string }> = ({ name }) => {
@@ -41,6 +40,7 @@ const Categories = () => {
     <article className="flex flex-col items-center my-5">
       <h2 className="font-kyiv text-4xl">Categories</h2>
       {/* <div className="my-2">{renderCategories(categories)}</div> */}
+      <Category name="Category 1" />
     </article>
   );
 };
