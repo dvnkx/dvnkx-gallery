@@ -7,7 +7,10 @@ type ImageCardProps = {
   name?: string;
 };
 
-const ImageCard = ({ image = landscape, name = "Name" }: ImageCardProps) => {
+const ImageCard: React.FC<ImageCardProps> = ({
+  image = landscape,
+  name = "Name",
+}) => {
   return (
     <div className="group w-[375px] m-5 space-x-2 space-y-2 flex flex-col items-center bg-ghost_white relative cursor-pointer">
       <Image className="p-10 aspect-video" src={image} alt={"Garden"} />

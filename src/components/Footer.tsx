@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="flex flex-col items-start p-10 gap-5">
       <hr className="w-full mb-2 border-light_gray" />
-      <p>&copy; {year} dvnkx's Gallery</p>
+      <p>&copy; {year} dvnkx&apos;s Gallery</p>
     </footer>
   );
 };

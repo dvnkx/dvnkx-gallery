@@ -13,19 +13,19 @@ type GalleryScrollProps = {
   images?: ImageType[];
 };
 
-const GalleryCards = ({ images }: { images?: ImageType[] }) => {
+const GalleryCards: React.FC<{ images?: ImageType[] }> = ({ images }) => {
   return (
     <div className="flex items-center justify-center md:justify-start">
-      {images && images.map((image) => <ImageCard />)}
+      {images && images.map((image) => <ImageCard key={image.id} />)}
     </div>
   );
 };
 
-const GalleryScroll = async ({
+const GalleryScroll: React.FC<GalleryScrollProps> = async ({
   to = "/",
   categoryName = "View All",
   direction = "left",
-}: GalleryScrollProps) => {
+}) => {
   return (
     <section className="my-5">
       <Link

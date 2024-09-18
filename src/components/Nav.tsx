@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { ComponentProps } from "react";
 
-export const Nav = ({ children }: { children: React.ReactNode }) => {
+export const Nav: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <nav className="bg-light_gray text-eerie_black flex justify-center">
       {children}

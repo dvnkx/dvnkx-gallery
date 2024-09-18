@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { ReactNode } from "react";
 import category from "@/static/svgs/category-svgrepo-com.svg";
 
-const Category = ({ name }: { name: string }): ReactNode => {
+const Category: React.FC<{ name: string }> = ({ name }) => {
   const route = name.replace(" ", "").toLowerCase();
   return (
     <Link
@@ -36,7 +36,7 @@ const renderCategories = (categories: CategoryNameType[]): ReactNode => {
   return rows;
 };
 
-const Categories = (): ReactNode => {
+const Categories = () => {
   return (
     <article className="flex flex-col items-center my-5">
       <h2 className="font-kyiv text-4xl">Categories</h2>
