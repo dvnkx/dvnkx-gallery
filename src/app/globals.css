@@ -4,15 +4,19 @@
 
 :root {
   --ghost_white: #f8f9fa;
-  --eerie_black: #181b1e;
   --light_gray: #cfd1d4;
+  --philippine_gray: #909091;
+  --charleston_green: #292a2a;
+  --eerie_black: #181b1e;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --ghost_white: #f8f9fa;
     --light_gray: #cfd1d4;
+    --philippine_gray: #909091;
+    --charleston_green: #292a2a;
+    --eerie_black: #181b1e;
   }
 }
 
@@ -31,13 +35,19 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--ghost_white);
+  background: var(--eerie_black);
   font-family: Albert-Sans, sans-serif;
 }
 
 @layer utilities {
+  .font-kyiv {
+    font-family: "Kyiv-Region", sans-serif;
+  }
   .text-balance {
     text-wrap: balance;
+  }
+  .animation-pause {
+    animation-play-state: paused;
   }
 }
