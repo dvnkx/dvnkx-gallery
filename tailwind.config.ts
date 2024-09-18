@@ -27,8 +27,10 @@ const config: Config = {
       },
       colors: {
         ghost_white: "var(--ghost_white)",
-        eerie_black: "var(--eerie_black)",
         light_gray: "var(--light_gray)",
+        philippine_gray: "var(--philippine_gray)",
+        charleston_green: "var(--charleston_green)",
+        eerie_black: "var(--eerie_black)",
       },
     },
   },

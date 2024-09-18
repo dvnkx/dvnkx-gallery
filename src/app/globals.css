@@ -4,15 +4,19 @@
 
 :root {
   --ghost_white: #f8f9fa;
-  --eerie_black: #181b1e;
   --light_gray: #cfd1d4;
+  --philippine_gray: #909091;
+  --charleston_green: #292a2a;
+  --eerie_black: #181b1e;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --ghost_white: #f8f9fa;
-    --eerie_black: #181b1e;
     --light_gray: #cfd1d4;
+    --philippine_gray: #909091;
+    --charleston_green: #292a2a;
+    --eerie_black: #181b1e;
   }
 }
 
