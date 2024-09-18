@@ -1,6 +1,7 @@
 import React from "react";
 import GalleryScroll from "./_components/GalleryScroll";
 import PageHeader from "@/components/PageHeader";
+import Categories from "./_components/Categories";
 
 const HomePage = () => {
   return (
@@ -8,6 +9,7 @@ const HomePage = () => {
       <PageHeader>Gallery</PageHeader>
       <GalleryScroll direction="left" />
       <GalleryScroll direction="right" categoryName="Newest" />
+      <Categories />
     </main>
   );
 };
