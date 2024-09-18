@@ -17,24 +17,24 @@ const Category: React.FC<{ name: string }> = ({ name }) => {
   );
 };
 
-const renderCategories = (categories: CategoryNameType[]): ReactNode => {
-  const rows: ReactNode[] = [];
-  let index = 0;
+// const renderCategories = (categories: CategoryNameType[]): ReactNode => {
+//   const rows: ReactNode[] = [];
+//   let index = 0;
 
-  for (let row = 1; index < categories.length; row++) {
-    const rowItems = categories.slice(index, index + row);
-    index += row;
-    rows.push(
-      <div key={row} className={`flex justify-center space-x-5 my-5`}>
-        {rowItems.map((category, idx) => (
-          <Category key={idx} {...category} />
-        ))}
-      </div>
-    );
-  }
+//   for (let row = 1; index < categories.length; row++) {
+//     const rowItems = categories.slice(index, index + row);
+//     index += row;
+//     rows.push(
+//       <div key={row} className={`flex justify-center space-x-5 my-5`}>
+//         {rowItems.map((category, idx) => (
+//           <Category key={idx} {...category} />
+//         ))}
+//       </div>
+//     );
+//   }
 
-  return rows;
-};
+//   return rows;
+// };
 
 const Categories = () => {
   return (
