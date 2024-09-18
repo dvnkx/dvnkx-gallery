@@ -37,6 +37,9 @@ body {
 }
 
 @layer utilities {
+  .font-kyiv {
+    font-family: "Kyiv-Region", sans-serif;
+  }
   .text-balance {
     text-wrap: balance;
   }
