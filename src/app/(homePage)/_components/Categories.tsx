@@ -51,7 +51,11 @@ const Categories = async () => {
   return (
     <article className="flex flex-col items-center my-5">
       <h2 className="font-kyiv text-4xl">Categories</h2>
-      <div className="my-2">{renderCategories(categories)}</div>
+      {categories ? (
+        <div className="my-2">{renderCategories(categories)}</div>
+      ) : (
+        <h1>No categories</h1>
+      )}
     </article>
   );
 };
