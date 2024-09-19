@@ -31,6 +31,7 @@ const config: Config = {
         philippine_gray: "var(--philippine_gray)",
         charleston_green: "var(--charleston_green)",
         eerie_black: "var(--eerie_black)",
+        auburn: "var(--auburn)",
       },
     },
   },

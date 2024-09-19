@@ -21,6 +21,7 @@ export default function RootLayout({
         <Nav>
           <NavLink href={"/"}>Home</NavLink>
           <NavLink href={"/categories"}>Categories</NavLink>
+          <NavLink href={"/new"}>New Image</NavLink>
         </Nav>
         <main className="flex-grow">{children}</main>
         <Footer />
