@@ -23,6 +23,7 @@ export default function RootLayout({
           <NavLink href={routes.HOME}>Home</NavLink>
           <NavLink href={routes.CATEGORIES}>Categories</NavLink>
           <NavLink href={routes.NEW_IMAGE}>New Image</NavLink>
+          <NavLink href={routes.NEW_CATEGORY}>New Category</NavLink>
         </Nav>
         <main className="flex-grow">{children}</main>
         <Footer />
