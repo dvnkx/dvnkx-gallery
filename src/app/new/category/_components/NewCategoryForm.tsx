@@ -12,7 +12,7 @@ const NewImageForm = () => {
     <Form action={action}>
       <Area htmlFor="name" label="Name" error={error?.name}>
         <input
-          className="w-[400px] rounded-md p-2 text-eerie_black"
+          className="max-w-[400px] rounded-md p-2 text-eerie_black"
           type="text"
           required
           placeholder="category name"
@@ -26,7 +26,7 @@ const NewImageForm = () => {
         error={error?.description}
       >
         <input
-          className="w-[400px] rounded-md p-2 text-eerie_black"
+          className="max-w-[400px] rounded-md p-2 text-eerie_black"
           type="text"
           placeholder="category description*"
           name="description"

@@ -18,7 +18,7 @@ export const NavLink = (
   return (
     <Link
       {...props}
-      className={`p-4 hover:bg-charleston_green hover:text-philippine_gray focus-visible:bg-charleston_green focus-visible:text-philippine_gray
+      className={`p-4 hover:bg-charleston_green hover:text-philippine_gray focus-visible:bg-charleston_green focus-visible:text-philippine_gray max-md:text-xs
         ${
           pathName === props.href && "bg-eerie_black text-ghost_white"
         } text-eerie_black`}
