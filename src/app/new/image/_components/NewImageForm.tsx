@@ -1,37 +1,11 @@
 "use client";
-import React, { ComponentProps, ReactNode, useEffect, useState } from "react";
-import { useFormState, useFormStatus } from "react-dom";
-import { addImage } from "../actions/addImage.action";
+
+import React, { useEffect, useState } from "react";
+import { useFormState } from "react-dom";
+import { addImage } from "../_actions/addImage.action";
 import { getCategoriesName } from "@/app/_actions/categories.actions";
-
-type AreaType = ComponentProps<"label"> & {
-  label: string;
-  error?: string[] | undefined;
-  children: ReactNode;
-};
-
-const Area: React.FC<AreaType> = ({ label, error, children }) => {
-  return (
-    <div className="space-y-2 flex flex-col">
-      <label className="text-2xl">{label}</label>
-      {children}
-      {error && <div className="text-auburn">{error}</div>}
-    </div>
-  );
-};
-
-const SubmitButton = () => {
-  const { pending } = useFormStatus();
-  return (
-    <button
-      className="border border-ghost_white rounded-md p-2 hover:bg-light_gray duration-300 text-3xl"
-      disabled={pending}
-      type="submit"
-    >
-      {pending ? "Submitting..." : "Submit"}
-    </button>
-  );
-};
+import Area from "../../_components/Area";
+import Form from "../../_components/Form";
 
 const NewImageForm = () => {
   const [error, action] = useFormState(addImage, {});
@@ -49,7 +23,7 @@ const NewImageForm = () => {
   }, []);
 
   return (
-    <form action={action} className="space-y-8 px-10">
+    <Form action={action}>
       <Area htmlFor="name" label="Name" error={error?.name}>
         <input
           className="w-[400px] rounded-md p-2 text-eerie_black"
@@ -98,8 +72,7 @@ const NewImageForm = () => {
           required
         />
       </Area>
-      <SubmitButton />
-    </form>
+    </Form>
   );
 };
 

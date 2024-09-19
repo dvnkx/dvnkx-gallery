@@ -14,14 +14,11 @@ export const addCategory = async (_: unknown, formData: FormData) => {
 
   const data = result.data;
 
-  try {
-    await prisma.category.create({
-      data,
-    });
+  const newCategory = await prisma.category.create({
+    data,
+  });
 
-    return redirect(routes.CATEGORIES);
-  } catch (error) {
-    console.error("Error saving image to db:", error);
-    return redirect(routes.CATEGORIES);
-  }
+  if (!newCategory) return;
+
+  return redirect(routes.CATEGORIES);
 };
