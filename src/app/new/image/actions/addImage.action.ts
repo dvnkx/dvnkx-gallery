@@ -23,7 +23,7 @@ export const addImage = async (_: unknown, formData: FormData) => {
         name,
         description,
         file: buffer,
-        categoryId: category
+        categoryId: category,
       },
     });
   } catch (error) {

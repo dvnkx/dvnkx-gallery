@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import { Nav, NavLink } from "@/components/Nav";
+import { routes } from "../keys/routes";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -19,9 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen flex flex-col">
         <Nav>
-          <NavLink href={"/"}>Home</NavLink>
-          <NavLink href={"/categories"}>Categories</NavLink>
-          <NavLink href={"/new"}>New Image</NavLink>
+          <NavLink href={routes.HOME}>Home</NavLink>
+          <NavLink href={routes.CATEGORIES}>Categories</NavLink>
+          <NavLink href={routes.NEW_IMAGE}>New Image</NavLink>
         </Nav>
         <main className="flex-grow">{children}</main>
         <Footer />
