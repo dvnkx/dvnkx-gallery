@@ -35,8 +35,8 @@ const renderCategories = (categories: CategoryNameType[]): ReactNode => {
         key={row}
         className={`flex max-md:flex-wrap  justify-center space-x-5 my-5`}
       >
-        {rowItems.map((category) => (
-          <Category key={category.id} {...category} />
+        {rowItems.map((category, i) => (
+          <Category key={i} {...category} />
         ))}
       </div>
     );
