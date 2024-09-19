@@ -8,6 +8,7 @@
   --philippine_gray: #909091;
   --charleston_green: #292a2a;
   --eerie_black: #181b1e;
+  --auburn: #a52a2a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +18,7 @@
     --philippine_gray: #909091;
     --charleston_green: #292a2a;
     --eerie_black: #181b1e;
+    --auburn: #a52a2a;
   }
 }
 
