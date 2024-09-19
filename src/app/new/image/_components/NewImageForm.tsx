@@ -1,7 +1,7 @@
 "use client";
 import React, { ComponentProps, ReactNode, useEffect, useState } from "react";
 import { useFormState, useFormStatus } from "react-dom";
-import { addImage } from "../actions/addImage.action";
+import { addImage } from "../_actions/addImage.action";
 import { getCategoriesName } from "@/app/_actions/categories.actions";
 
 type AreaType = ComponentProps<"label"> & {
