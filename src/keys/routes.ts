@@ -4,4 +4,5 @@ export const enum routes {
   CATEGORIES = "/categories",
   NEW = "/new",
   NEW_IMAGE = NEW + "/image",
+  NEW_CATEGORY = NEW + "/category",
 }
