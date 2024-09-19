@@ -19,7 +19,7 @@ export const addCategory = async (_: unknown, formData: FormData) => {
     data,
   });
 
-  if (!newCategory) return "Error";
+  if (!newCategory) return;
 
   return redirect(routes.CATEGORIES);
 };
