@@ -7,3 +7,9 @@ export const getCategoriesName = () => {
     select: { name: true, id: true },
   });
 };
+
+export const getImages = () => {
+  return prisma.image.findMany({
+    take: 10,
+  });
+};
