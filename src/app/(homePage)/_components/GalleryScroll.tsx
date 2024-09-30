@@ -5,32 +5,45 @@ import { Image as ImageType } from "@prisma/client";
 import ImageCard from "@/components/ImageCard";
 import arrowToTop from "@/static/svgs/arrow-right-top.svg";
 import Image from "next/image";
+import { getAscImages, getNewestImages } from "@/app/_actions/images.actions";
+import { bufferToBase64Image } from "@/lib/bufferToBase64Image";
+import { routes } from "@/keys/routes";
 
 type GalleryScrollProps = {
-  to?: string;
   categoryName?: string;
   direction?: "left" | "right";
   images?: ImageType[];
 };
 
-const GalleryCards: React.FC<{ images?: ImageType[] }> = ({ images }) => {
+const GalleryCards: React.FC<{ images?: ImageType[] }> = async ({ images }) => {
   return (
     <div className="flex items-center justify-center md:justify-start">
-      {images && images.map((image) => <ImageCard key={image.id} />)}
+      {images &&
+        images.map(async (image) => (
+          <ImageCard
+            name={image.name}
+            file={await bufferToBase64Image(image.file)}
+            key={image.id}
+          />
+        ))}
     </div>
   );
 };
 
 const GalleryScroll: React.FC<GalleryScrollProps> = async ({
-  to = "/",
   categoryName = "View All",
   direction = "left",
 }) => {
+  const images =
+    categoryName === "View All"
+      ? await getAscImages()
+      : await getNewestImages();
+
   return (
-    <section className="my-5">
+    <section>
       <Link
         className="inline-flex items-center p-3 border border-ghost_white rounded-md hover:bg-light_gray duration-300"
-        href={to}
+        href={routes.CATEGORIES}
       >
         <p>{categoryName}</p>
         <Image
@@ -47,8 +60,8 @@ const GalleryScroll: React.FC<GalleryScrollProps> = async ({
             : "animate-infinite-scroll-to-right"
         } hover:animation-pause`}
       >
-        <GalleryCards />
-        <GalleryCards />
+        <GalleryCards images={images} />
+        <GalleryCards images={images} />
       </div>
     </section>
   );
