@@ -13,12 +13,6 @@ const Category: React.FC<{ name: string }> = ({ name }) => {
       href={`/${route}`}
     >
       <h3>{name}</h3>
-      <Image
-        className="ml-2 max-md:hidden"
-        alt={name}
-        width={22}
-        src={category}
-      />
     </Link>
   );
 };
@@ -50,7 +44,15 @@ const Categories = async () => {
 
   return (
     <article className="flex flex-col items-center my-5">
-      <h2 className="font-kyiv text-4xl">Categories</h2>
+      <div className="flex">
+        <h2 className="font-kyiv text-4xl">Categories </h2>
+        <Image
+          className="ml-2 max-md:hidden"
+          alt={"cat"}
+          width={22}
+          src={category}
+        />
+      </div>
       {categories ? (
         <div className="my-2">{renderCategories(categories)}</div>
       ) : (
