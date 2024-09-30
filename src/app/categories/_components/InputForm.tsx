@@ -3,7 +3,7 @@ import React from "react";
 const InputForm = () => {
   return (
     <form
-      className="mx-4 flex items-start gap-4 max-md:flex-col max-md:items-center"
+      className="flex items-start gap-4 max-md:flex-col max-md:items-center"
       action={""}
     >
       <label className="text-2xl" htmlFor="category">

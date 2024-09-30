@@ -1,14 +1,14 @@
 import React from "react";
 import InputForm from "./_components/InputForm";
 import PageHeader from "@/components/PageHeader";
-import Gallery from "./_components/Gallery";
+import GalleryLayout from "./_components/GalleryLayout";
 
 const GalleryPage = () => {
   return (
     <div>
       <PageHeader>Gallery</PageHeader>
       <InputForm />
-      <Gallery />
+      <GalleryLayout />
     </div>
   );
 };

@@ -8,7 +8,7 @@ type FormProps = {
 
 const Form: React.FC<FormProps> = ({ action, children }) => {
   return (
-    <form action={action} className="space-y-8 px-10">
+    <form action={action} className="space-y-8">
       {children}
       <SubmitButton />
     </form>

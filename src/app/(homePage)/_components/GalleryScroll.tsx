@@ -29,7 +29,7 @@ const GalleryScroll: React.FC<GalleryScrollProps> = async ({
   return (
     <section className="my-5">
       <Link
-        className="inline-flex items-center ml-5 p-3 border border-ghost_white rounded-md hover:bg-light_gray duration-300"
+        className="inline-flex items-center p-3 border border-ghost_white rounded-md hover:bg-light_gray duration-300"
         href={to}
       >
         <p>{categoryName}</p>
