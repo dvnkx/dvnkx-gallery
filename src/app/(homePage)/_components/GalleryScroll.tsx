@@ -1,13 +1,14 @@
 import React from "react";
-
 import Link from "next/link";
 import { Image as ImageType } from "@prisma/client";
-import ImageCard from "@/components/ImageCard";
 import arrowToTop from "@/static/svgs/arrow-right-top.svg";
 import Image from "next/image";
 import { getAscImages, getNewestImages } from "@/app/_actions/images.actions";
 import { bufferToBase64Image } from "@/lib/bufferToBase64Image";
 import { routes } from "@/keys/routes";
+import ImageCard from "./HomeImageCard";
+import ImageCardSkeleton from "./HomeImageCardSkeleton";
+import GalleryCardsSkeleton from "./GalleryCardsSkeleton";
 
 type GalleryScrollProps = {
   categoryName?: string;
@@ -60,8 +61,12 @@ const GalleryScroll: React.FC<GalleryScrollProps> = async ({
             : "animate-infinite-scroll-to-right"
         } hover:animation-pause`}
       >
-        <GalleryCards images={images} />
-        <GalleryCards images={images} />
+        <GalleryCardsSkeleton>
+          <GalleryCards images={images} />
+        </GalleryCardsSkeleton>
+        <GalleryCardsSkeleton>
+          <GalleryCards images={images} />
+        </GalleryCardsSkeleton>
       </div>
     </section>
   );
