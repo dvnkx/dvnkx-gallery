@@ -9,7 +9,7 @@ const Category: React.FC<{ name: string }> = ({ name }) => {
   const route = name.replace(" ", "").toLowerCase();
   return (
     <Link
-      className="inline-flex items-center m-2 p-3 border border-ghost_white rounded-md hover:bg-light_gray duration-300 animate-pulse hover:animate-none"
+      className="m-2 p-3 border border-ghost_white rounded-md hover:bg-light_gray duration-300 animate-pulse hover:animate-none"
       href={`/${route}`}
     >
       <h3>{name}</h3>
