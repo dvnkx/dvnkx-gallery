@@ -1,7 +1,8 @@
 import React from "react";
 import ImageCard from "./ImageCard";
-import { getImages } from "@/app/_actions/categories.actions";
+
 import { bufferToBase64Image } from "@/lib/bufferToBase64Image";
+import { getImages } from "@/app/_actions/images.actions";
 
 const GalleryLayout = async () => {
   const images = await getImages();
