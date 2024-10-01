@@ -2,7 +2,7 @@
 
 import prisma from "@/lib/db";
 
-export const getCategoriesName = () => {
+export const getCategories = () => {
   return prisma.category.findMany({
     select: { name: true, id: true },
   });

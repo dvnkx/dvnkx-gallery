@@ -3,9 +3,8 @@
 import React, { useEffect, useState } from "react";
 import { useFormState } from "react-dom";
 import { addImage } from "../_actions/addImage.action";
-import { getCategoriesName } from "@/app/_actions/categories.actions";
-import Area from "../../_components/Area";
-import Form from "../../_components/Form";
+import { getCategories } from "@/app/_actions/categories.actions";
+import { Form, Area } from "../../_components";
 
 const NewImageForm = () => {
   const [error, action] = useFormState(addImage, {});
@@ -15,7 +14,7 @@ const NewImageForm = () => {
 
   useEffect(() => {
     const fetchCategories = async () => {
-      const fetchedCategories = await getCategoriesName();
+      const fetchedCategories = await getCategories();
       setCategories(fetchedCategories);
     };
 

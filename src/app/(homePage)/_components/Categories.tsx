@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { ReactNode } from "react";
 import category from "@/static/svgs/category-svgrepo-com.svg";
-import { getCategoriesName } from "@/app/_actions/categories.actions";
+import { getCategories } from "@/app/_actions/categories.actions";
 import { CategoryNameType } from "@/types/categories.types";
 
 const Category: React.FC<{ name: string }> = ({ name }) => {
@@ -40,7 +40,7 @@ const renderCategories = (categories: CategoryNameType[]): ReactNode => {
 };
 
 const Categories = async () => {
-  const categories = await getCategoriesName();
+  const categories = await getCategories();
 
   return (
     <article className="flex flex-col items-center my-5">

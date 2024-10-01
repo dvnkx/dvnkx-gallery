@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 import { ImageWithCategory } from "@/types/image.types";
 
-type CardProps = {
+type ImageCardProps = {
   image: Omit<ImageWithCategory, "file">;
   file: string;
 };
 
-const ImageCard: React.FC<CardProps> = ({ image, file }) => {
+const ImageCard: React.FC<ImageCardProps> = ({ image, file }) => {
   const { id, name, description, createdAt, Category } = image;
   return (
     <div className="relative mb-4 break-inside-avoid group cursor-pointer">

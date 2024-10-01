@@ -2,8 +2,7 @@
 import React from "react";
 import { useFormState } from "react-dom";
 import { addCategory } from "../_actions/addCategory";
-import Area from "../../_components/Area";
-import Form from "../../_components/Form";
+import { Area, Form } from "../../_components";
 
 const NewImageForm = () => {
   const [error, action] = useFormState(addCategory, {});

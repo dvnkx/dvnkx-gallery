@@ -1,5 +1,5 @@
 import React, { ReactNode, Suspense } from "react";
-import ImageCardSkeleton from "./ImageCardSkeleton";
+import { ImageCardSkeleton } from ".";
 
 const GalleryLayoutSkeleton = ({ children }: { children: ReactNode }) => {
   return (

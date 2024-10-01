@@ -1,6 +1,6 @@
+import React from "react";
 import { Metadata } from "next/types";
 import PageHeader from "@/components/PageHeader";
-import React from "react";
 import NewImageForm from "./_components/NewImageForm";
 
 export const metadata: Metadata = {

@@ -1,14 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Image as ImageType } from "@prisma/client";
 import arrowToTop from "@/static/svgs/arrow-right-top.svg";
-import Image from "next/image";
 import { getAscImages, getNewestImages } from "@/app/_actions/images.actions";
 import { bufferToBase64Image } from "@/lib/bufferToBase64Image";
 import { routes } from "@/keys/routes";
-import ImageCard from "./HomeImageCard";
-import ImageCardSkeleton from "./HomeImageCardSkeleton";
-import GalleryCardsSkeleton from "./GalleryCardsSkeleton";
+import { ScrollCard, GalleryScrollSkeleton } from ".";
 
 type GalleryScrollProps = {
   categoryName?: string;
@@ -21,7 +19,7 @@ const GalleryCards: React.FC<{ images?: ImageType[] }> = async ({ images }) => {
     <div className="flex items-center justify-center md:justify-start">
       {images &&
         images.map(async (image) => (
-          <ImageCard
+          <ScrollCard
             name={image.name}
             file={await bufferToBase64Image(image.file)}
             key={image.id}
@@ -61,12 +59,12 @@ const GalleryScroll: React.FC<GalleryScrollProps> = async ({
             : "animate-infinite-scroll-to-right"
         } hover:animation-pause`}
       >
-        <GalleryCardsSkeleton>
+        <GalleryScrollSkeleton>
           <GalleryCards images={images} />
-        </GalleryCardsSkeleton>
-        <GalleryCardsSkeleton>
+        </GalleryScrollSkeleton>
+        <GalleryScrollSkeleton>
           <GalleryCards images={images} />
-        </GalleryCardsSkeleton>
+        </GalleryScrollSkeleton>
       </div>
     </section>
   );
