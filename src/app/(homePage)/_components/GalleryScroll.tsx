@@ -42,7 +42,7 @@ const GalleryScroll: React.FC<GalleryScrollProps> = async ({
     <section>
       <Link
         className="inline-flex items-center p-3 border border-ghost_white rounded-md hover:bg-light_gray duration-300"
-        href={routes.CATEGORIES}
+        href={routes.COLLECTION}
       >
         <p>{categoryName}</p>
         <Image

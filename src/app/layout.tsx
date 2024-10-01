@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <Nav>
           <NavLink href={routes.HOME}>Home</NavLink>
-          <NavLink href={routes.CATEGORIES}>Categories</NavLink>
+          <NavLink href={routes.COLLECTION}>Collection</NavLink>
           <NavLink href={routes.NEW_IMAGE}>New Image</NavLink>
           <NavLink href={routes.NEW_CATEGORY}>New Category</NavLink>
         </Nav>
