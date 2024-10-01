@@ -1,7 +1,7 @@
 export const enum routes {
   HOME = "/",
 
-  CATEGORIES = "/categories",
+  COLLECTION = "/collection",
 
   NEW = "/new",
   NEW_IMAGE = NEW + "/image",

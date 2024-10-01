@@ -1,7 +1,9 @@
 "use server";
 
+import { routes } from "@/keys/routes";
 import prisma from "@/lib/db";
 import imageSchema from "@/schemas/image.schema";
+import { redirect } from "next/navigation";
 
 export const addImage = async (_: unknown, formData: FormData) => {
   const result = imageSchema.safeParse(Object.fromEntries(formData.entries()));
@@ -29,4 +31,6 @@ export const addImage = async (_: unknown, formData: FormData) => {
   } catch (error) {
     return console.error("Error saving image to db: ", error);
   }
+
+  redirect(routes.COLLECTION);
 };

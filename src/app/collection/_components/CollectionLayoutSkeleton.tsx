@@ -1,7 +1,7 @@
 import React, { ReactNode, Suspense } from "react";
-import ImageCardSkeleton from "./ImageCardSkeleton";
+import { ImageCardSkeleton } from ".";
 
-const GalleryLayoutSkeleton = ({ children }: { children: ReactNode }) => {
+const CollectionLayoutSkeleton = ({ children }: { children: ReactNode }) => {
   return (
     <Suspense
       fallback={
@@ -19,4 +19,4 @@ const GalleryLayoutSkeleton = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default GalleryLayoutSkeleton;
+export default CollectionLayoutSkeleton;

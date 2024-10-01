@@ -1,7 +1,6 @@
 import React from "react";
-import GalleryScroll from "./_components/GalleryScroll";
 import PageHeader from "@/components/PageHeader";
-import Categories from "./_components/Categories";
+import { GalleryScroll, Categories } from "./_components";
 
 const HomePage = () => {
   return (

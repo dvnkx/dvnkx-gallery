@@ -1,12 +1,12 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
 
-type ImageCardProps = {
+type ScrollCardProps = {
   file: string;
   name: string;
 };
 
-const ImageCard: React.FC<ImageCardProps> = ({ file, name }) => {
+const ScrollCard: React.FC<ScrollCardProps> = ({ file, name }) => {
   return (
     <div className="group w-[375px] m-5 space-x-2 space-y-2 flex flex-col items-center bg-ghost_white relative cursor-pointer">
       <Image
@@ -23,4 +23,4 @@ const ImageCard: React.FC<ImageCardProps> = ({ file, name }) => {
   );
 };
 
-export default ImageCard;
+export default ScrollCard;
