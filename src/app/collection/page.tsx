@@ -1,13 +1,15 @@
 import PageHeader from "@/components/PageHeader";
 import React from "react";
 import { CollectionLayoutSkeleton, CollectionLayout } from "./_components";
+import { getImages } from "../_actions/images.actions";
 
-const CollectionPage = () => {
+const CollectionPage = async () => {
+  const images = await getImages();
   return (
     <>
       <PageHeader>Collection</PageHeader>
       <CollectionLayoutSkeleton>
-        <CollectionLayout />
+        <CollectionLayout images={images} />
       </CollectionLayoutSkeleton>
     </>
   );

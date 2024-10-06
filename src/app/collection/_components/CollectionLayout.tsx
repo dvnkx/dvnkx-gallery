@@ -2,10 +2,15 @@ import React from "react";
 import { bufferToBase64Image } from "@/lib/bufferToBase64Image";
 import { getImages } from "@/app/_actions/images.actions";
 import { ImageCard } from ".";
+import { ImageWithCategory } from "@/types/image.types";
 
-const CollectionLayout = async () => {
-  const images = await getImages();
+type CollectionLayoutProps = {
+  images: ImageWithCategory[];
+};
 
+const CollectionLayout: React.FC<CollectionLayoutProps> = async ({
+  images,
+}) => {
   return (
     <main className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 py-10 md:py-20 gap-4">
       {images &&
