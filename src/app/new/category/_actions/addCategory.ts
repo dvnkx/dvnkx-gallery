@@ -20,5 +20,5 @@ export const addCategory = async (_: unknown, formData: FormData) => {
 
   if (!newCategory) return;
 
-  return redirect(routes.CATEGORIES);
+  return redirect(routes.COLLECTION);
 };

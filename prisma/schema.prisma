@@ -23,7 +23,9 @@ model Image {
   updatedAt DateTime @updatedAt
 
   categoryId String?
-  Category   Category? @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  category   Category? @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+
+  @@index([name])
 }
 
 model Category {
@@ -32,4 +34,6 @@ model Category {
   description String?
 
   images Image[]
+
+  @@index([name])
 }

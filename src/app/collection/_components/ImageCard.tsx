@@ -8,7 +8,7 @@ type ImageCardProps = {
 };
 
 const ImageCard: React.FC<ImageCardProps> = ({ image, file }) => {
-  const { id, name, description, createdAt, Category } = image;
+  const { id, name, description, createdAt, category } = image;
   return (
     <div className="relative mb-4 break-inside-avoid group cursor-pointer">
       <Image
@@ -28,7 +28,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ image, file }) => {
           <p>
             {new Date(createdAt).toLocaleDateString().replaceAll("/", " · ")}
           </p>
-          <p>Category: {Category?.name}</p>
+          <p>Category: {category?.name}</p>
         </div>
       </div>
     </div>

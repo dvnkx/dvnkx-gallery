@@ -4,4 +4,4 @@ type CategoryName = {
   name: string;
 } | null;
 
-export type ImageWithCategory = { Category: CategoryName } & Image;
+export type ImageWithCategory = { category: CategoryName } & Image;
