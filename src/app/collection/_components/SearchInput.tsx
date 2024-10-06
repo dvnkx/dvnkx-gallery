@@ -1,9 +1,9 @@
 import React from "react";
 
-const InputForm = () => {
+const SearchInput = () => {
   return (
     <form
-      className="flex items-start gap-4 max-md:flex-col max-md:items-center"
+      className="flex items-start gap-4 max-md:flex-col max-md:items-center my-20"
       action={""}
     >
       <label className="text-2xl" htmlFor="category">
@@ -26,4 +26,4 @@ const InputForm = () => {
   );
 };
 
-export default InputForm;
+export default SearchInput;
